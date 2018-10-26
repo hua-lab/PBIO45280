@@ -6,11 +6,10 @@ library(RColorBrewer)
 
 # Load R package that have been installed in our server.  There are two ways to install R packages: install.packages() and biocLite().  Compiling programs could be nontrivial.  Fortunately, you don’t need to do this.  It is beyond the scope of this class.  All the packages you need have been already compiled in our server.  
 
-
-wt_r1<-read.table("wt_flower_r1_count.tab",header=FALSE)
-wt_r2<-read.table("wt_flower_r2_count.tab",header=FALSE)
-ask1_r1<-read.table("ask1_flower_r1_count.tab",header=FALSE)
-ask1_r2<-read.table("ask1_flower_r2_count.tab",header=FALSE)
+wt_r1<-read.table("wt_r1_count.tab",header=FALSE)
+wt_r2<-read.table("wt_r2_count.tab",header=FALSE)
+ask1_r1<-read.table("mt_r1_count.tab",header=FALSE)
+ask1_r2<-read.table("mt_r2_count.tab",header=FALSE)
 
 # Read count files processed in Lab 20
 
@@ -92,14 +91,14 @@ y<-estimateGLMTagwiseDisp(y,design,prior.df=20)
 corraw_y_counts<-cor(y$counts,use="na.or.complete",method="pearson")
 
 heatmap.2(corraw_y_counts,
-col=brewer.pal(10,"Set3"),
-keysize=2,
-margins=c(10,10),
-trace=c("none"),
-dendrogram="column",
-density.info=c("none"),
-cexRow=1,
-cexCol=1)
+         col=brewer.pal(10,"Set3"),
+         keysize=2,
+         margins=c(10,10),
+         trace=c("none"),
+         dendrogram="column",
+         density.info=c("none"),
+         cexRow=1,
+         cexCol=1)
 
 # You may recall what this does from Lab 18.
 
@@ -155,7 +154,7 @@ DIFF_FDR <- DIFF_Exp_List [DIFF_Exp_List$FDR <= 0.05, ]
 
 # Keep rows with Pvalue or FDR less than or equal to .05 respectively.  In general, this can be considered as the list of Differentially Expressed Genes (DEG)
 
-write.csv(DIFF_FDR, file="ask1_wt_DEG_FDR.csv") 
+write.csv(DIFF_FDR, file="mt_wt_DEG_FDR.csv") 
 
 #Exporting Data 
 

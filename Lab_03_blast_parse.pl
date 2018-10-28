@@ -20,7 +20,7 @@ while(my $parse=<BLASTP_OUT>){
 
 # my defines a new string.  While is a Perl syntax to read each line in the file one by one
 	
-chomp $parse; 
+	chomp $parse; 
 
 # chomp removes the hidden new line symbol “\n” or its cousins linefeeds and carriage returns. Keep in mind, in programming, any symbols, including those hidden ones could make you very frustrated because they are all meaningful and should be carefully treated.  
 	
@@ -35,7 +35,7 @@ chomp $parse;
 
 # Save all hit IDs into the array and many are duplicated
 
-				}
+		}
 
 close BLASTP;
 	
@@ -53,14 +53,14 @@ foreach my $hit_id(@blastp_parse_ids){
 
 if (!$hash{$hit_id}) {    
         
-  push (@unique, $hit_id);
-          			 $hash{$hit_id} = "true";
+ 	 push (@unique, $hit_id);
+          $hash{$hit_id} = "true";
 
-             		  }
+               }
 
 # If a string (key) is not assigned (the syntax “!” means “no” in Perl) to a value (here is an artificial string “true”), we will assign it to “true”.  $hash{$hit_id} = "true" is a structure to write a hash. Here, $hash calls %hash in and asks %hash to assign a “true” value to the key variable, $hit_id. However, if a key ($hit_id here) variable has already been assigned as a “true” value in a previous string read in by foreach, it will be memorized in the hash %hash and will be ignored by the if syntax.  Again, “!” means “no”.
 	
-		}
+	}
 
 # Each loop needs to be separated by brackets.  Thus the functions in the loop will finish first.
 
@@ -68,13 +68,13 @@ my @unique_hit_ids=keys %hash;
 
 # keys reads all key variables of a hash and saves it into an array.
 
-	foreach my $unique_id(@unique_hit_ids){
+foreach my $unique_id(@unique_hit_ids){
 
-		print $unique_id, “\n”;
+	print $unique_id, “\n”;
 
-		}
+	}
 #print out the result and each id will be printed in one line
 
-	exit;
+exit;
 
 #  exit turns off the progrm

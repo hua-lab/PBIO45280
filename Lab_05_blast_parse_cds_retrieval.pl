@@ -11,9 +11,9 @@ use Bio::PrimarySeq;
 my $pep_db=Bio::DB::Fasta->new(“path_to_your_target_proteome_file”);
 my $cds_db=Bio::DB::Fasta->new(“path_to_your_target_transcriptome_file”);
 
-	open BLAST_PARSE,”<one_of_your_blast_parse_file”;
+open BLAST_PARSE,”<one_of_your_blast_parse_file”;
 
-	while(my $parse_id=< BLAST_PARSE>){
+while(my $parse_id=< BLAST_PARSE>){
 
 		chomp $parse_id;
 
@@ -26,8 +26,8 @@ my $cds_db=Bio::DB::Fasta->new(“path_to_your_target_transcriptome_file”);
 # Similar to retrieving a protein sequence, we use Bio::DB::Fasta to get a CDS for a target hit.
 		
  		my $translate_obj=Bio::PrimarySeq->new(
-                          -seq=>$cds
-							);
+                         		 -seq=>$cds
+						);
 
 # This is a typical structure to setup an objective in OO programming.  You may just remember this structure for how to setup an objective for Bio::PrimarySeq module
 
@@ -40,11 +40,11 @@ my $cds_db=Bio::DB::Fasta->new(“path_to_your_target_transcriptome_file”);
 # Here, we introduced three Perl syntaxes.  As the name states, die means terminate the program.  However, it also has a similar function to print.  In this statement, it will print out $parse_id if $pep is not the same as $translate_pep.  In other word, it will not stop and print out $parse_id if $pep is the same (eq) as $translate_pep.  This is the proofread function often used in programming.
 		
 		print “>”,$parse_id,”\n”;
-    print  $cds,”\n”;
+	    	print  $cds,”\n”;
 
 # print out the CDS if $cds passes the proof.
 
-}
+ }
 		
 	close BLAST_PARSE;
 

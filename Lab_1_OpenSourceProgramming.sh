@@ -1,7 +1,7 @@
 
 # 1. SSH to your user account (ID: your OU ID, PW:PBIO5280) through Putty (Win) or Terminal (Mac)
 
-	ssh –X your_OU_ID@132.235.146.140
+	ssh –X username@ip_address
 
 # 2.  Lists the files and directories in the folder when you log in (home folder)
 

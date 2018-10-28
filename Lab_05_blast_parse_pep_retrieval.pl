@@ -1,4 +1,5 @@
-#! ust/bin/perl
+#! /usr/bin/perl
+
 use warnings;
 use strict;
 use Bio::DB::Fasta;

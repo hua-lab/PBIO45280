@@ -52,14 +52,18 @@ foreach my $hit_id(@blastp_parse_ids){
 
 # foreach is a syntax to read each string of an array one by one 
 
-if (!$hash{$hit_id}) {    
+    if (!$hash{$hit_id}) {    
         
  	 push (@unique, $hit_id);
           $hash{$hit_id} = "true";
 
                }
 
-# If a string (key) is not assigned (the syntax “!” means “no” in Perl) to a value (here is an artificial string “true”), we will assign it to “true”.  $hash{$hit_id} = "true" is a structure to write a hash. Here, $hash calls %hash in and asks %hash to assign a “true” value to the key variable, $hit_id. However, if a key ($hit_id here) variable has already been assigned as a “true” value in a previous string read in by foreach, it will be memorized in the hash %hash and will be ignored by the if syntax.  Again, “!” means “no”.
+# If a string (key) is not assigned (the syntax “!” means “no” in Perl) to a value (here is an artificial string “true”), 
+# we will assign it to “true”.  $hash{$hit_id} = "true" is a structure to write a hash. Here, $hash calls %hash in and asks 
+# %hash to assign a “true” value to the key variable, $hit_id. However, if a key ($hit_id here) variable has already been 
+# assigned as a “true” value in a previous string read in by foreach, it will be memorized in the hash %hash and will be 
+# ignored by the if syntax.  Again, “!” means “no”.
 	
 	}
 

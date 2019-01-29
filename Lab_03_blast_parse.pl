@@ -31,7 +31,7 @@ while(my $parse=<BLASTP_OUT>){
 	
 # Again, the hit ids are in the second column of each line.  Because in most programming languages, counting begins 0.  Thus, the second is counted as 1.
 
-	push(@blastp_parse_ids,$hit); 
+	push(@blastp_parse_ids,$hit_id); 
 
 # Save all hit IDs into the array and many are duplicated
 

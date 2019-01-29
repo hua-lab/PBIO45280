@@ -43,7 +43,8 @@ close BLASTP;
 	
 # The codes below will apply the unique variable property of the key variables in a hash to retrieve unique HIT IDS
 
-my %hash; 
+my %hash;
+my @unique;
 
 # my define a new hash
 

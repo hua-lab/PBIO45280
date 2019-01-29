@@ -37,7 +37,7 @@ while(my $parse=<BLASTP_OUT>){
 
 		}
 
-close BLASTP;
+close BLASTP_OUT;
 	
 # After finish reading the file, the file should be closed. 
 	

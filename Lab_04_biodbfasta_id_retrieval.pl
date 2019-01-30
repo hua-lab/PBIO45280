@@ -9,7 +9,7 @@ use Bio::DB::Fasta;
 
 # This is how we call a Perl module in to your program.  How a Perl module is developed edited, and installed is out of the scope of this lab class
 
-my $pep_db=Bio::DB::Fasta->new(“path_to_your_proteome_file”);
+my $pep_db=Bio::DB::Fasta->new("../proteome_databases/at_pep.fa");
 
 # This is an index statement that allows Bio::DB::Fasta to read in your fasta-formated sequence database and save it into a sting, named $pep_db. An arrow symbol is always used in Objective-oriented (OO) programming to call methods. OO programming is also out of the scope of this lab.
 
@@ -35,7 +35,7 @@ foreach my $id(@sort_ids){
 
 # This is the embedded function of Bio::DB::Fasta module.  It calculates the length of the sequence.
 
-	  print $id,”\t”,$count,”\t”,$length,”\n”;
+	  print $id,"\t",$count,"\t",$length,"\n";
 
 				}
 # We use print to write out the string variables that are separated by a tab symbol “\t”.

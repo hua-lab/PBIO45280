@@ -3,7 +3,7 @@
 use warnings;
 use strict;
 
-open FILE,"<one_of_your_selected_proteomes_with_path";
+open FILE,"<../proteome_databases/at_pep.fa";
 my @file=<FILE>;
 close FILE;
 

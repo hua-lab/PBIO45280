@@ -97,7 +97,7 @@ for(my $i=0; $i<$yeast_species_id_count; ++$i){
 
 	}
 
-# deal with work SKP1s
+# deal with worm SKP1s
 
 my $worm_species_id_count=scalar @worm_unique_species_ids;
 

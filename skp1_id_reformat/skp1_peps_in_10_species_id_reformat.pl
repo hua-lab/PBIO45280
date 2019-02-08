@@ -34,7 +34,7 @@ foreach my $species_id(@species){
 
 				}
 
-#sounds famaliar with the above module?
+#sounds familiar with the above module?
 #
 my @yeast_unique_species_ids;
 my @worm_unique_species_ids;

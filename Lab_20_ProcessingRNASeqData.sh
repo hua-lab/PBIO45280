@@ -10,7 +10,7 @@ java -classpath /path/to/trimmomatic-0.32.jar PE -threads 16 -phred33 Input_file
 STAR --runMode genomeGenerate --genomeDir Arabidopsis/ --genomeFastaFiles ./Arabidopsis/TAIR10.fasta --runThreadN 2 --sjdbGTFfile ./Arabidopsis/TAIR10.gtf --genomeChrBinNbits 16
 
 # Once this is complete we will align the reads (pair end here) to the genome:
-STAR --genomeDir TAIR_STARgenome/ --readFilesIn  file_R1_trimmed.fastq.gz file_R2_trimmed.fastq.gz   --runThreadN 2 --sjdbGTFfile TAIR10.gtf --outFilterType BySJout --outFilterMultimapNmax 10 --alignSJDBoverhangMin 1 --outFilterMismatchNmax 999 --alignIntronMin 150 --alignIntronMax 20000
+STAR --genomeDir Arabidopsis/ --readFilesIn  file_R1_trimmed.fastq.gz file_R2_trimmed.fastq.gz   --runThreadN 2 --sjdbGTFfile ./Arabidopsis/TAIR10.gtf --outFilterType BySJout --outFilterMultimapNmax 10 --alignSJDBoverhangMin 1 --outFilterMismatchNmax 999 --alignIntronMin 150 --alignIntronMax 20000
 
 # Oct 25 18:28:30 ..... Started STAR run
 # Oct 25 18:28:30 ..... Loading genome

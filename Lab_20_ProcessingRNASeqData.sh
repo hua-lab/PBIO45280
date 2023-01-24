@@ -7,7 +7,7 @@ java -classpath /path/to/trimmomatic-0.32.jar PE -threads 16 -phred33 Input_file
 
 # Part 3: Align cleaned reads to the references genome
 # To use STAR quick mapping, will need to generate a STAR formatted genome.  This is required and is part of how STAR is able to run so quickly and accurately (this has been done):
-STAR --runMode genomeGenerate --genomeDir TAIR_STARgenome/ --genomeFastaFiles TAIR10.fasta --runThreadN 2 --sjdbGTFfile TAIR10.gtf --genomeChrBinNbits 16
+STAR --runMode genomeGenerate --genomeDir Arabidopsis/ --genomeFastaFiles ./Arabidopsis/TAIR10.fasta --runThreadN 2 --sjdbGTFfile ./Arabidopsis/TAIR10.gtf --genomeChrBinNbits 16
 
 # Once this is complete we will align the reads (pair end here) to the genome:
 STAR --genomeDir TAIR_STARgenome/ --readFilesIn  file_R1_trimmed.fastq.gz file_R2_trimmed.fastq.gz   --runThreadN 2 --sjdbGTFfile TAIR10.gtf --outFilterType BySJout --outFilterMultimapNmax 10 --alignSJDBoverhangMin 1 --outFilterMismatchNmax 999 --alignIntronMin 150 --alignIntronMax 20000

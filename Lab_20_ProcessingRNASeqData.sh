@@ -1,7 +1,7 @@
 Fastqc name_of_your_file.fastq
 #Run FastQC on the chosen sequence files to check the quality of raw sequence data
 
-java -classpath /path/to/trimmomatic-0.32.jar PE -threads 16 -phred33 Input_file_R1.fastq Input_file_R2.fastq file_R1_trimmed.fastq file_R1_trimmed_unpaired.fastq file_R2_trimmed.fastq file_R2_trimmed_unpaired.fastq ILLUMINACLIP:TrueSeq.fa:2:30:10 LEADING:3 TRAILING:3 HEADCROP:10 SLIDINGWINDOW:4:20 MINLEN:30	
+java -jar /path/to/trimmomatic-0.32.jar PE -threads 16 -phred33 Input_file_R1.fastq Input_file_R2.fastq file_R1_trimmed.fastq file_R1_trimmed_unpaired.fastq file_R2_trimmed.fastq file_R2_trimmed_unpaired.fastq ILLUMINACLIP:TrueSeq.fa:2:30:10 LEADING:3 TRAILING:3 HEADCROP:10 SLIDINGWINDOW:4:20 MINLEN:30	
 
 # Trim adapter and low quality sequences. Now, run FastQC again and see what has changed.  
 
